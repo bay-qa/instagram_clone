@@ -20,6 +20,8 @@
 		93AE06361C465449000A43D5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE06351C465449000A43D5 /* TableViewController.swift */; };
 		93D83F7F1C4C61AE00D26189 /* place_holder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 93D83F7E1C4C61AE00D26189 /* place_holder_image.png */; };
 		93D83F811C4C663100D26189 /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D83F801C4C663100D26189 /* PostImageViewController.swift */; };
+		93D83F851C4F0A7000D26189 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D83F841C4F0A7000D26189 /* TableViewCell.swift */; };
+		93D83F871C4F10DA00D26189 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D83F861C4F10DA00D26189 /* FeedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		93AE06351C465449000A43D5 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		93D83F7E1C4C61AE00D26189 /* place_holder_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_holder_image.png; sourceTree = "<group>"; };
 		93D83F801C4C663100D26189 /* PostImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
+		93D83F841C4F0A7000D26189 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		93D83F861C4F10DA00D26189 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				93AE060A1C44ECF5000A43D5 /* ViewController.swift */,
 				93AE06351C465449000A43D5 /* TableViewController.swift */,
 				93D83F801C4C663100D26189 /* PostImageViewController.swift */,
+				93D83F841C4F0A7000D26189 /* TableViewCell.swift */,
+				93D83F861C4F10DA00D26189 /* FeedTableViewController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -213,6 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D83F851C4F0A7000D26189 /* TableViewCell.swift in Sources */,
+				93D83F871C4F10DA00D26189 /* FeedTableViewController.swift in Sources */,
 				93D83F811C4C663100D26189 /* PostImageViewController.swift in Sources */,
 				93AE060C1C44ECF5000A43D5 /* ViewController.swift in Sources */,
 				93AE06361C465449000A43D5 /* TableViewController.swift in Sources */,

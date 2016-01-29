@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-664" y="265"/>
+            <point key="canvasLocation" x="-665" y="342"/>
         </scene>
         <!--User List-->
         <scene sceneID="Jbh-VV-fkf">
@@ -155,7 +155,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fI4-3m-13z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="265"/>
+            <point key="canvasLocation" x="847" y="596"/>
         </scene>
         <!--Post Image-->
         <scene sceneID="u8T-7n-6rz">
@@ -169,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="place_holder_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="T2U-4W-24x">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="placeholder" image="place_holder_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="T2U-4W-24x">
                                 <rect key="frame" x="180" y="87" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="JI3-qJ-7BP"/>
@@ -178,6 +178,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FM-jZ-Fl6">
                                 <rect key="frame" x="233" y="359" width="134" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="choose_image"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="GR5-BA-PJu"/>
                                 </constraints>
@@ -194,6 +195,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-Xf-OhM">
                                 <rect key="frame" x="250" y="475" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="post_image"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tXL-eR-U87"/>
                                 </constraints>
@@ -226,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnP-NU-57e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="265"/>
+            <point key="canvasLocation" x="1568" y="431"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="B1L-Sl-7ym">
@@ -305,7 +307,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-aN-Lny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="-397"/>
+            <point key="canvasLocation" x="838" y="-439"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Da8-t2-3QG">
@@ -321,13 +323,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzM-k7-0Cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="265"/>
+            <point key="canvasLocation" x="33" y="342"/>
         </scene>
     </scenes>
     <resources>
         <image name="place_holder_image.png" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GAW-U3-D8r"/>
+        <segue reference="w5y-mi-FT9"/>
     </inferredMetricsTieBreakers>
 </document>

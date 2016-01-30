@@ -66,6 +66,7 @@ class FeedTableViewController: UITableViewController {
                                     self.messages.append(object["message"] as! String)
                                     
                                     self.imageFiles.append(object["imageFile"] as! PFFile)
+                                    print (self.imageFiles.description)
                                     
                                     self.usernames.append(self.users[object["userId"] as! String]!)
                                     

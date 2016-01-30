@@ -11,14 +11,14 @@ import Parse
 
 class PostImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var canPostImage : Bool = false;
     
     func displayAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
+            
         })))
-        
-        self.presentViewController(alert, animated: true, completion: nil)
+            self.presentViewController(alert, animated: true, completion: nil)
     }
     
     
@@ -35,17 +35,11 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
         self.presentViewController(image, animated: true, completion: nil)
     }
     
-    
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//        imageToPost.image = image
-//    }
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.dismissViewControllerAnimated(true, completion: nil)
         imageToPost.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\(info[UIImagePickerControllerReferenceURL])")
-        
+        print(info[UIImagePickerControllerReferenceURL] as! NSURL)
+        self.canPostImage = true;
     }
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController)
@@ -54,8 +48,11 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
     }
     
     @IBOutlet var message: UITextField!
+    @IBOutlet var postImageButton: UIButton!
     
     @IBAction func postImage(sender: AnyObject) {
+        
+        if (self.canWePostImage()){
             activityIndicator = UIActivityIndicatorView(frame: self.view.frame)
             activityIndicator.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
             activityIndicator.center = self.view.center
@@ -93,18 +90,22 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
                     }
                     self.displayAlert("Could not post Image", message: errorMessage)
                 }
-            
-        
-        
         }
+        self.canPostImage = false;
+        }else{
+            self.displayAlert("Error", message: "Please choose an image before posting!")
+        }
+    }
+    
+    func canWePostImage() -> Bool
+    {
+        return self.canPostImage;
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.message.accessibilityIdentifier = "message_field"
         self.imageToPost.accessibilityIdentifier = "image"
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -112,5 +113,4 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    
-}
+    }

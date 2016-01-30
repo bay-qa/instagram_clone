@@ -130,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ASJ-C7-146" id="Ctu-C1-Ate">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -224,6 +224,7 @@
                     <connections>
                         <outlet property="imageToPost" destination="T2U-4W-24x" id="vVV-RC-bn6"/>
                         <outlet property="message" destination="JtJ-pa-8u3" id="xtS-Gb-S9k"/>
+                        <outlet property="postImageButton" destination="yDI-Xf-OhM" id="0uL-ik-WS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnP-NU-57e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,7 +244,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="345"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nu7-Aj-c1F" id="zdI-md-Wbk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="345"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="344.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD5-3I-wQo">

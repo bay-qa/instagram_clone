@@ -104,8 +104,9 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.accessibilityIdentifier = "post_image_view"
         self.message.accessibilityIdentifier = "message_field"
-        self.imageToPost.accessibilityIdentifier = "image"
+        self.imageToPost.accessibilityIdentifier = "image_to_post"
     }
     
     override func didReceiveMemoryWarning() {

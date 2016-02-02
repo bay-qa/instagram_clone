@@ -19,6 +19,8 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.accessibilityIdentifier = "users_feeds"
+        
         let query = PFUser.query()
         
         query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
@@ -111,20 +113,20 @@ class FeedTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let myCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
         
+        myCell.accessibilityIdentifier = "user_feed"
+        myCell.userName.accessibilityIdentifier = "user_name"
+        myCell.message.accessibilityIdentifier = "user_message"
+
+
         imageFiles[indexPath.row].getDataInBackgroundWithBlock { (data, error) -> Void in
-            
+
             if let downloadedImage = UIImage(data: data!) {
-                
                 myCell.postedImage.image = downloadedImage
-                
             }
-            
         }
         
         
-        
         myCell.userName.text = usernames[indexPath.row]
-        
         myCell.message.text = messages[indexPath.row]
         
         return myCell
@@ -135,7 +137,6 @@ class FeedTableViewController: UITableViewController {
         if segue.identifier == "logOut" {
             navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: false)
             PFUser.logOut()
-            
         }
         
         

@@ -27,18 +27,18 @@ class ViewController: UIViewController {
     
     var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
-    func displayAlert(title: String, message: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        })))
-        
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
+//    func displayAlert(title: String, message: String){
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+//        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//        })))
+//        
+//        self.presentViewController(alert, animated: true, completion: nil)
+//    }
     
     @IBAction func signUp(sender: AnyObject) {
         if username.text == "" || password.text == "" {
-            displayAlert("Error in form", message: "Please enter a username and password!")
+            Common.displayAlert("Error in form", message: "Please enter a username and password!", sender: self)
         } else {
             activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
             activityIndicator.center = self.view.center
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                         if let errorString = error!.userInfo["error"] as? String {
                             errorMessage = errorString
                         }
-                        self.displayAlert("Failed Signup", message: errorMessage)
+                        Common.displayAlert("Failed Signup", message: errorMessage, sender: self)
                     }
                 })
             }else{
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
                         if let errorString = error!.userInfo["error"] as? String {
                             errorMessage = errorString
                         }
-                        self.displayAlert("Filed Login", message: errorMessage)
+                        Common.displayAlert("Failed Login", message: errorMessage,sender: self)
                     }
                 })
             }

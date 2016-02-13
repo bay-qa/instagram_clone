@@ -14,6 +14,7 @@
 		81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81781A49E0DB00E65899 /* AudioToolbox.framework */; };
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
+		938A38711C6CA9C800586DC5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A38701C6CA9C800586DC5 /* Common.swift */; };
 		93AE060B1C44ECF5000A43D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE06091C44ECF5000A43D5 /* AppDelegate.swift */; };
 		93AE060C1C44ECF5000A43D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE060A1C44ECF5000A43D5 /* ViewController.swift */; };
 		93AE060E1C44EDC8000A43D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AE060D1C44EDC8000A43D5 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		938A38701C6CA9C800586DC5 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		93AE06091C44ECF5000A43D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93AE060A1C44ECF5000A43D5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93AE060D1C44EDC8000A43D5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				93D83F801C4C663100D26189 /* PostImageViewController.swift */,
 				93D83F841C4F0A7000D26189 /* TableViewCell.swift */,
 				93D83F861C4F10DA00D26189 /* FeedTableViewController.swift */,
+				938A38701C6CA9C800586DC5 /* Common.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				93AE060C1C44ECF5000A43D5 /* ViewController.swift in Sources */,
 				93AE06361C465449000A43D5 /* TableViewController.swift in Sources */,
 				93AE060B1C44ECF5000A43D5 /* AppDelegate.swift in Sources */,
+				938A38711C6CA9C800586DC5 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

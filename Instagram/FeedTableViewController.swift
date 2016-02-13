@@ -50,6 +50,9 @@ class FeedTableViewController: UITableViewController {
             getFollowedUsersQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
                 
                 if let objects = objects {
+                    if objects.count < 1 {
+                        Common.displayAlert("You do not follow anyone!", message: "Please follow at least one friend", sender: self)
+                    }else {
                     
                     for object in objects {
                         
@@ -81,6 +84,7 @@ class FeedTableViewController: UITableViewController {
                             
                         })
                     }
+                }
                     
                 }
                 

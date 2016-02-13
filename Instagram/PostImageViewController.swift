@@ -9,18 +9,9 @@
 import UIKit
 import Parse
 
-class PostImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class PostImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     var canPostImage : Bool = false;
-    
-    func displayAlert(title: String, message: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            
-        })))
-            self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
     
     var activityIndicator = UIActivityIndicatorView()
     
@@ -80,7 +71,7 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
                 
                 if error == nil
                 {
-                    self.displayAlert("Imgage Posted", message: "Your image has been posted successfully!")
+                    Common.displayAlert("Imgage Posted", message: "Your image has been posted successfully!", sender: self)
                     self.imageToPost.image = UIImage(named: "place_holder_image.png")
                     self.message.text = ""
                 }else
@@ -88,12 +79,12 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
                     if let errorString = error!.userInfo["error"] as? String {
                         errorMessage = errorString
                     }
-                    self.displayAlert("Could not post Image", message: errorMessage)
+                    Common.displayAlert("Could not post Image", message: errorMessage, sender: self)
                 }
         }
         self.canPostImage = false;
         }else{
-            self.displayAlert("Error", message: "Please choose an image before posting!")
+            Common.displayAlert("Error", message: "Please choose an image before posting!", sender: self)
         }
     }
     
